@@ -1,0 +1,11 @@
+diff -uNr ac3dec-0.6.1.orig/configure.in ac3dec-0.6.1/configure.in
+--- ac3dec-0.6.1.orig/configure.in	Fri Apr 12 23:53:13 2002
++++ ac3dec-0.6.1/configure.in	Fri Apr 12 23:53:51 2002
+@@ -30,6 +30,7 @@
+ alpha*-*) AC_DEFINE(__alpha__);;
+ sparc-*) AC_DEFINE(__sparc__);;
+ ppc-*) AC_DEFINE(__ppc__);;
++powerpc-*) AC_DEFINE(__ppc__);;
+ *) echo "$host is not currently supported by ac3dec"; exit 1;;
+ esac
+ 
