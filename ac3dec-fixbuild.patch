@@ -1,0 +1,13 @@
+diff -ur ac3dec-0.6.1.orig/libac3/bitstream.c ac3dec-0.6.1/libac3/bitstream.c
+--- ac3dec-0.6.1.orig/libac3/bitstream.c	2000-03-30 02:51:24.000000000 +0200
++++ ac3dec-0.6.1/libac3/bitstream.c	2004-08-10 20:45:16.000000000 +0200
+@@ -90,7 +91,8 @@
+ static inline void
+ bitstream_fill_current()
+ {
+-	current_word = *((uint_32*)buffer_start)++;
++	uint_32* temp=(uint_32*)buffer_start;
++	current_word = *(temp)++;
+ 	current_word = swab32(current_word);
+ }
+ 
