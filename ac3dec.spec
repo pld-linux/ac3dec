@@ -11,6 +11,8 @@ Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://www.linuxvideo.org/devel/data/%{name}.tar.gz
 Patch0:		%{name}-make.patch
 URL:		http://www.linuxvideo.org/ac3dec/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildConflicts:	libao
 Conflicts:	libao
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
