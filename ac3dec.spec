@@ -6,11 +6,11 @@ Release:	4
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://gusnet.cx/aaron/codecs/tarballs/%{name}-%{version}.tar.gz
+Source0:	http://gusnet.cx/aaron/codecs/ac3/tarballs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-am_fix.patch
 Patch2:		%{name}-ppc.patch
-URL:		http://gusnet.cx/aaron/codecs/ac3dec.php
+URL:		http://gusnet.cx/aaron/codecs/ac3/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -73,11 +73,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR="$RPM_BUILD_ROOT"
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
