@@ -2,7 +2,7 @@ Summary:	a free AC-3 stream decoder
 Summary(pl):	darmowy dekoder strumieni AC-3
 Name:		ac3dec
 Version:	0.6.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -31,7 +31,7 @@ Summary(pl):	Pliki nag³ówkowe wymagane przez programy u¿ywaj±ce ac3dec
 Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
-Requires:	%{name}
+Requires:	%{name} = %{version}
 
 %description devel
 Header files required to build programs using ac3dec library
@@ -46,7 +46,7 @@ Summary(pl):	Statyczna biblioteka ac3dec.
 Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
-Requires:	%{name}-devel
+Requires:	%{name}-devel = %{version}
 
 %description static
 Static ac3dec library.
