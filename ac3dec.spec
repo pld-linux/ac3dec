@@ -7,6 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://gusnet.cx/aaron/codecs/ac3/tarballs/%{name}-%{version}.tar.gz
+# Source0-md5:	92b8d3af8d0d06318bb2bb04b8093eef
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-am_fix.patch
 Patch2:		%{name}-ppc.patch
