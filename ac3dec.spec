@@ -2,7 +2,7 @@ Summary:	A free AC-3 stream decoder
 Summary(pl):	Darmowy dekoder strumieni AC-3
 Name:		ac3dec
 Version:	0.6.1
-Release:	7
+Release:	8
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
