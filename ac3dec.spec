@@ -17,7 +17,6 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 A free AC-3 stream decoder.
 
@@ -70,7 +69,7 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR="$RPM_BUILD_ROOT"
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
