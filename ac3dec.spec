@@ -16,10 +16,10 @@ Conflicts:	libao
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-a free AC-3 stream decoder
+A free AC-3 stream decoder.
 
 %description -l pl
-darmowy dekoder strumieni AC-3
+Darmowy dekoder strumieni AC-3.
 
 %package devel
 Summary:	Header file required to build programs using ac3dec library
@@ -62,7 +62,7 @@ autoconf
 automake -a -c
 %configure
 
-%{__make}
+%{__make} CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -Ilibac3 -Ilibao"
 
 %install
 rm -rf $RPM_BUILD_ROOT
