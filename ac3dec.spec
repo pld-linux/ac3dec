@@ -2,7 +2,7 @@ Summary:	a free AC-3 stream decoder
 Summary(pl):	darmowy dekoder strumieni AC-3
 Name:		ac3dec
 Version:	0.6.1
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -10,6 +10,7 @@ Group(de):	X11/Applikationen/Multimedia
 Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://gusnet.cx/aaron/codecs/tarballs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-make.patch
+Patch1:		%{name}-am_fix.patch
 URL:		http://gusnet.cx/aaron/codecs/ac3dec.php
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -57,6 +58,7 @@ Statyczna biblioteka ac3dec.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm missing
