@@ -1,0 +1,64 @@
+diff -urN ac3dec.org/Makefile.am ac3dec/Makefile.am
+--- ac3dec.org/Makefile.am	Fri Feb 16 22:58:34 2001
++++ ac3dec/Makefile.am	Fri Feb 16 23:10:51 2001
+@@ -1,7 +1,7 @@
+ # # Process this file with automake to produce Makefile.in.
+ AUTOMAKE_OPTIONS = 1.3 foreign
+ 
+-CFLAGS = -Wall -Werror -O3 -g -Ilibac3 -Ilibao
++CFLAGS = -Wall -Werror -g -Ilibac3 -Ilibao
+ 
+ bin_PROGRAMS = ac3dec 
+ 
+@@ -14,5 +14,5 @@
+ EXTRA_DIST = README Changelog TODO plot_spectrum.m autogen.sh
+        
+ 
+-SUBDIRS = libao libac3 tools test .
++SUBDIRS = libao libac3 tools .
+ 
+diff -urN ac3dec.org/configure.in ac3dec/configure.in
+--- ac3dec.org/configure.in	Fri Feb 16 22:58:34 2001
++++ ac3dec/configure.in	Fri Feb 16 22:58:43 2001
+@@ -27,4 +27,4 @@
+ builtin(include, libao/configure.incl)
+ builtin(include, libac3/configure.incl)
+ 
+-AC_OUTPUT(libao/Makefile libac3/Makefile tools/Makefile test/Makefile Makefile ) 
++AC_OUTPUT(libao/Makefile libac3/Makefile tools/Makefile Makefile ) 
+diff -urN ac3dec.org/libac3/Makefile.am ac3dec/libac3/Makefile.am
+--- ac3dec.org/libac3/Makefile.am	Fri Feb 16 22:58:34 2001
++++ ac3dec/libac3/Makefile.am	Fri Feb 16 23:01:22 2001
+@@ -4,7 +4,7 @@
+ 
+ EXTRA_DIST = configure.incl
+ 
+-INCLUDES += -I$(top_srcdir)/include
++INCLUDES += -I$(top_srcdir)/include -I$(top_srcdir)/libao
+ libdir = $(PLUGIN_DIR)
+ 
+ SOURCE_KNI = srfft_kni_c.c srfft_kni.S downmix_kni.S imdct512_kni.S imdct_kni.c
+diff -urN ac3dec.org/libao/Makefile.am ac3dec/libao/Makefile.am
+--- ac3dec.org/libao/Makefile.am	Fri Feb 16 22:58:34 2001
++++ ac3dec/libao/Makefile.am	Fri Feb 16 23:13:44 2001
+@@ -1,7 +1,7 @@
+ # # Process this file with automake to produce Makefile.in.
+ AUTOMAKE_OPTIONS = 1.3 foreign
+ 
+-CFLAGS = -Wall -Werror -O3 -g @LIBAO_CFLAGS@
++CFLAGS = -Wall -Werror -g @LIBAO_CFLAGS@
+ 
+ lib_LTLIBRARIES = libao.la
+ 
+diff -urN ac3dec.org/tools/Makefile.am ac3dec/tools/Makefile.am
+--- ac3dec.org/tools/Makefile.am	Fri Feb 16 22:58:34 2001
++++ ac3dec/tools/Makefile.am	Fri Feb 16 23:11:00 2001
+@@ -1,7 +1,7 @@
+ # # Process this file with automake to produce Makefile.in.
+ AUTOMAKE_OPTIONS = 1.3 foreign
+ 
+-CFLAGS = -Wall -Werror -O3 -g 
++CFLAGS = -Wall -Werror -g 
+ 
+ bin_PROGRAMS = extract_ac3 
+ 
