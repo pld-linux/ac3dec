@@ -57,7 +57,7 @@ Statyczna biblioteka ac3dec.
 %patch2 -p1
 
 %build
-rm missing
+rm -f missing
 libtoolize --copy --force
 aclocal
 autoheader
