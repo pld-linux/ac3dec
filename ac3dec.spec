@@ -6,8 +6,6 @@ Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Group(de):	X11/Applikationen/Multimedia
-Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://gusnet.cx/aaron/codecs/tarballs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-am_fix.patch
@@ -30,13 +28,6 @@ Darmowy dekoder strumieni AC-3.
 Summary:	Header file required to build programs using ac3dec library
 Summary(pl):	Pliki nagЁСwkowe wymagane przez programy u©ywaj╠ce ac3dec
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -50,13 +41,6 @@ biblioteki ac3dec.
 Summary:	Static ac3dec library.
 Summary(pl):	Statyczna biblioteka ac3dec.
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
