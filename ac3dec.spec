@@ -1,5 +1,5 @@
-Summary:	a free AC-3 stream decoder
-Summary(pl):	darmowy dekoder strumieni AC-3
+Summary:	A free AC-3 stream decoder
+Summary(pl):	Darmowy dekoder strumieni AC-3
 Name:		ac3dec
 Version:	0.6.1
 Release:	4
@@ -18,10 +18,10 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A free AC-3 stream decoder.
+ac3dec is a free AC-3 stream decoder.
 
 %description -l pl
-Darmowy dekoder strumieni AC-3.
+ac3dec jest darmowym dekoderem strumieni AC-3.
 
 %package devel
 Summary:	Header file required to build programs using ac3dec library
