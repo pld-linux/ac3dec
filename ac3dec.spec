@@ -39,8 +39,8 @@ Pliki nag³ówkowe niezbêdne do kompilacji programów korzystaj±cych z
 biblioteki ac3dec.
 
 %package static
-Summary:	Static ac3dec library.
-Summary(pl):	Statyczna biblioteka ac3dec.
+Summary:	Static ac3dec library
+Summary(pl):	Statyczna biblioteka ac3dec
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
 
