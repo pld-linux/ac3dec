@@ -12,6 +12,7 @@ Patch0:		%{name}-make.patch
 Patch1:		%{name}-am_fix.patch
 Patch2:		%{name}-ppc.patch
 Patch3:		%{name}-fixbuild.patch
+Patch4:		%{name}-amd64.patch
 URL:		http://gusnet.cx/aaron/codecs/ac3/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -55,6 +56,7 @@ Statyczna biblioteka ac3dec.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 rm -f missing
