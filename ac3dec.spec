@@ -1,20 +1,19 @@
 Summary:	a free AC-3 stream decoder
 Summary(pl):	darmowy dekoder strumieni AC-3
 Name:		ac3dec
-Version:	0.1
+Version:	0.6.1
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Group(de):	X11/Applikationen/Multimedia
 Group(pl):	X11/Aplikacje/Multimedia
-Source0:	http://www.linuxvideo.org/devel/data/%{name}.tar.gz
+Source0:	http://gusnet.cx/aaron/codecs/tarballs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-make.patch
-URL:		http://www.linuxvideo.org/ac3dec/
+URL:		http://gusnet.cx/aaron/codecs/ac3dec.php
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildConflicts:	libao
-Conflicts:	libao
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,10 +52,11 @@ Static ac3dec library.
 Statyczna biblioteka ac3dec.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
 
 %build
+rm missing
 libtoolize --copy --force
 aclocal
 autoheader
@@ -64,7 +64,7 @@ autoconf
 automake -a -c
 %configure
 
-%{__make} CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -Ilibac3 -Ilibao"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_libdir}/lib*.so
-%{_includedir}/*.h
+%{_includedir}/ac3
 
 %files static
 %defattr(644,root,root,755)
