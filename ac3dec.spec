@@ -28,7 +28,7 @@ Darmowy dekoder strumieni AC-3.
 Summary:	Header file required to build programs using ac3dec library
 Summary(pl):	Pliki nag³ówkowe wymagane przez programy u¿ywaj±ce ac3dec
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
 Header files required to build programs using ac3dec library
@@ -41,7 +41,7 @@ biblioteki ac3dec.
 Summary:	Static ac3dec library
 Summary(pl):	Statyczna biblioteka ac3dec
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 Static ac3dec library.
