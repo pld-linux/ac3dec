@@ -1,5 +1,5 @@
 Summary:	A free AC-3 stream decoder
-Summary(pl):	Darmowy dekoder strumieni AC-3
+Summary(pl.UTF-8):   Darmowy dekoder strumieni AC-3
 Name:		ac3dec
 Version:	0.6.1
 Release:	8
@@ -22,32 +22,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 ac3dec is a free AC-3 stream decoder.
 
-%description -l pl
+%description -l pl.UTF-8
 ac3dec jest darmowym dekoderem strumieni AC-3.
 
 %package devel
 Summary:	Header file required to build programs using ac3dec library
-Summary(pl):	Pliki nag³ówkowe wymagane przez programy u¿ywaj±ce ac3dec
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe wymagane przez programy uÅ¼ywajÄ…ce ac3dec
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
 Header files required to build programs using ac3dec library
 
-%description devel -l pl
-Pliki nag³ówkowe niezbêdne do kompilacji programów korzystaj±cych z
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilacji programÃ³w korzystajÄ…cych z
 biblioteki ac3dec.
 
 %package static
 Summary:	Static ac3dec library
-Summary(pl):	Statyczna biblioteka ac3dec
+Summary(pl.UTF-8):   Statyczna biblioteka ac3dec
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 Static ac3dec library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka ac3dec.
 
 %prep
